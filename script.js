@@ -19,15 +19,15 @@ cardFilterContainer.appendChild(labelTipo);
 //select TIPO
 const selectTipo = document.createElement("select");
 selectTipo.id = "select-tipo";
+
 cardFilterContainer.appendChild(selectTipo);
 
-selectTipo.addEventListener("click",  
- seleccionarTipoOpciones = (e) =>{
-    //buscar el metodo.. opcionesTipo.map/filter? for each? for of?
-});
 
-//opciones TIPO
 const opcionesTipo = [
+    {
+        value: 'todos',
+        label: 'Todos'
+    },
     {
         value: 'ganancia',
         label: 'Ganancia'
@@ -37,10 +37,17 @@ const opcionesTipo = [
         label: 'Gasto'
     }
 ];
+opcionesTipo.forEach(option => {
+    const opt = document.createElement("option");
+    opt.appendChild(document.createTextNode(option.label));
+    opt.setAttribute("value", option.value);
+    selectTipo.appendChild(opt);
+});
 
 
+selectTipo.addEventListener("change", (e) =>{
 
-
+});
 
 
 //-------------------------------------------
