@@ -2,11 +2,20 @@
 //creacion CONTAINER FILTROS
 const cardFilterContainer = document.createElement("div");
 cardFilterContainer.id = "card-filter-container";
-cardFilterContainer.textContent = "Filtros";
 
-cardFilterContainer.add
+cardFilterContainer.classList.add("card");
 
 document.body.appendChild(cardFilterContainer);
+//----------------------------------------------------------//
+
+//TITULO DE CARD FILTROS
+
+const tituloFiltro = document.createElement("h2");
+tituloFiltro.appendChild(document.createTextNode("Filtros"));
+
+tituloFiltro.classList.add("card-header-tittle");
+
+cardFilterContainer.appendChild(tituloFiltro);
 
 //-----------------------------------------------------------//
 
@@ -15,13 +24,17 @@ document.body.appendChild(cardFilterContainer);
 //label TIPO
 const labelTipo = document.createElement("label");
 labelTipo.appendChild(document.createTextNode("Tipo"));
+
+labelTipo.classList.add("label");
+
 cardFilterContainer.appendChild(labelTipo);
 //select TIPO
 const selectTipo = document.createElement("select");
 selectTipo.id = "select-tipo";
 
-cardFilterContainer.appendChild(selectTipo);
+selectTipo.classList.add("select");
 
+cardFilterContainer.appendChild(selectTipo);
 
 const opcionesTipo = [
     {
@@ -44,11 +57,9 @@ opcionesTipo.forEach(option => {
     selectTipo.appendChild(opt);
 });
 
-
 selectTipo.addEventListener("change", (e) =>{
 
 });
-
 
 //-------------------------------------------
 
@@ -56,10 +67,61 @@ selectTipo.addEventListener("change", (e) =>{
 //label CATEGORIA
 const labelCategoria = document.createElement("label");
 labelCategoria.appendChild(document.createTextNode("Categoría"));
+
+labelCategoria.classList.add("label");
+
 cardFilterContainer.appendChild(labelCategoria);
 
-
 //select CATEGORIA
+const selectCategoria = document.createElement("select");
+selectCategoria.id = "select-categoria";
+
+selectCategoria.classList.add("select");
+
+cardFilterContainer.appendChild(selectCategoria);
+
+const opcionesCategoria = [
+    {
+        value: 'todas',
+        label: 'Todas'
+    },
+    {
+        value: 'comida',
+        label: 'Comida'
+    },
+    {
+        value: 'servicios',
+        label: 'Servicios'
+    },
+    {
+        value: 'salidas',
+        label: 'Salidas'
+    },
+    {
+        value: 'educacion',
+        label: 'Educación'
+    },
+    {
+        value: 'transporte',
+        label: 'Transporte'
+    },
+    {
+        value: 'trabajo',
+        label: 'Trabajo'
+    }
+
+];
+opcionesCategoria.forEach(option => {
+    const optCat = document.createElement("option");
+    optCat.appendChild(document.createTextNode(option.label));
+    optCat.setAttribute("value", option.value);
+    selectCategoria.appendChild(optCat);
+});
+
+selectCategoria.addEventListener("change", (e) =>{
+
+});
+
 
 //-----------------------------------------
 
@@ -67,10 +129,16 @@ cardFilterContainer.appendChild(labelCategoria);
 //label DESDE
 const labelDesde = document.createElement("label");
 labelDesde.appendChild(document.createTextNode("Desde"));
+
+labelDesde.classList.add("label");
+
 cardFilterContainer.appendChild(labelDesde);
 //input DESDE
 const inputDesde = document.createElement("input");
-//inputDesde.appendChild(document.createElement("type date"));???
+inputDesde.type = "date";
+
+inputDesde.classList.add("input");
+
 cardFilterContainer.appendChild(inputDesde);
 
 
@@ -80,9 +148,57 @@ cardFilterContainer.appendChild(inputDesde);
 //label ORDENAR
 const labelOrdenar = document.createElement("label");
 labelOrdenar.appendChild(document.createTextNode("Ordenar por"));
+
+labelOrdenar.classList.add("label");
+
 cardFilterContainer.appendChild(labelOrdenar);
 
 //select ORDENAR
+
+const selectOrdenar = document.createElement("select");
+selectOrdenar.id = "select-ordenar";
+
+selectOrdenar.classList.add("select");
+
+cardFilterContainer.appendChild(selectOrdenar);
+
+const opcionesOrdenar = [
+    {
+        value: 'mas-reciente',
+        label: 'Más reciente'
+    },
+    {
+        value: 'menos-reciente',
+        label: 'Menos reciente'
+    },
+    {
+        value: 'mayor-monto',
+        label: 'Mayor monto'
+    },
+    {
+        value: 'menor-monto',
+        label: 'Menor monto'
+    },
+    {
+        value: 'a-z',
+        label: 'A/Z'
+    },
+    {
+        value: 'z-a',
+        label: 'Z/A'
+    }
+];
+opcionesOrdenar.forEach(option => {
+    const optOrd = document.createElement("option");
+    optOrd.appendChild(document.createTextNode(option.label));
+    optOrd.setAttribute("value", option.value);
+    selectOrdenar.appendChild(optOrd);
+});
+
+selectOrdenar.addEventListener("change", (e) =>{
+
+});
+
 
 //-----------------------------------------
 
