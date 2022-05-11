@@ -3,7 +3,14 @@
 const cardFilterContainer = document.createElement("div");
 cardFilterContainer.id = "card-filter-container";
 
-cardFilterContainer.classList.add("card");
+cardFilterContainer.style.padding = "20px 20px";
+
+cardFilterContainer.classList.add("margin-iz");
+cardFilterContainer.classList.add("margin-top");
+cardFilterContainer.classList.add("padding-bottom");
+cardFilterContainer.classList.add("column");
+cardFilterContainer.classList.add("box");
+cardFilterContainer.classList.add("is-one-third");
 
 document.body.appendChild(cardFilterContainer);
 //----------------------------------------------------------//

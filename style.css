@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* VARIABLES *************************************/
+
+.margin-iz{
+   margin-left: 20px;
+}
+
+.margin-dch{ 
+   margin-right: 20px;
+}
+
+.margin-top{
+    margin-top: 20px;
+}
+
+.padding-b{
+    padding-bottom: 20px;
+}
