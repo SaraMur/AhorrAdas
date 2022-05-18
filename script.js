@@ -15,6 +15,53 @@ cardFilterContainer.classList.add("is-one-third");
 document.body.appendChild(cardFilterContainer);
 //----------------------------------------------------------//
 
+//CONTAINER de todos los filtros***********************/
+const containerAllFilters = document.createElement("div");
+containerAllFilters.id = "container-all-filters";
+cardFilterContainer.appendChild(containerAllFilters);
+//--------------------------------------------------------//
+
+
+//MOSTRAR / OCULTAR FILTROS
+//VINCULOS DE MOSTRAR / OCULTAR FILTROS
+// const textoMostrarFiltros = document.createElement("a");
+// textoMostrarFiltros.appendChild(document.createTextNode("Mostrar filtros"));
+// cardFilterContainer.appendChild(textoMostrarFiltros);
+
+// const textoOcultarFiltros = document.createElement("a");
+// textoOcultarFiltros.appendChild(document.createTextNode("Ocultar filtros"));
+// cardFilterContainer.appendChild(textoOcultarFiltros);
+
+const toggleMostrarOcultarFiltros = document.createElement("a");
+toggleMostrarOcultarFiltros.id = "filters-toggle";
+toggleMostrarOcultarFiltros.appendChild(document.createTextNode("Ocultar filtros"));
+
+cardFilterContainer.appendChild(toggleMostrarOcultarFiltros);
+
+
+
+
+toggleMostrarOcultarFiltros.addEventListener("click", (e) =>{
+    const cambiarMostrarOcultar = () => {
+        const toggle =  toggleMostrarOcultarFiltros;
+        const filters = containerAllFilters;
+    
+        if (toggle.innerText === "Ocultar Filtros") {
+            toggle.innerText = "Mostrar Filtros"
+            filters.classList.add("is-hidden")
+        } else {
+            toggle.innerText = "Ocultar Filtros"
+            filters.classList.remove("is-hidden")
+        }
+    }
+ 
+});
+
+
+
+
+//----------------------------------------------------------//
+
 //TITULO DE CARD FILTROS
 
 const tituloFiltro = document.createElement("h2");
@@ -22,7 +69,7 @@ tituloFiltro.appendChild(document.createTextNode("Filtros"));
 
 tituloFiltro.classList.add("card-header-tittle");
 
-cardFilterContainer.appendChild(tituloFiltro);
+containerAllFilters.appendChild(tituloFiltro);
 
 //-----------------------------------------------------------//
 
@@ -34,19 +81,19 @@ labelTipo.appendChild(document.createTextNode("Tipo"));
 
 labelTipo.classList.add("label");
 
-cardFilterContainer.appendChild(labelTipo);
+containerAllFilters.appendChild(labelTipo);
 //select TIPO
 const selectTipo = document.createElement("select");
 selectTipo.id = "select-tipo";
 
 selectTipo.classList.add("select");
 
-cardFilterContainer.appendChild(selectTipo);
+containerAllFilters.appendChild(selectTipo);
 
 const opcionesTipo = [
     {
-        value: 'todos',
-        label: 'Todos'
+        value: 'todos', 
+        label: 'Todos' 
     },
     {
         value: 'ganancia',
@@ -77,7 +124,7 @@ labelCategoria.appendChild(document.createTextNode("Categoría"));
 
 labelCategoria.classList.add("label");
 
-cardFilterContainer.appendChild(labelCategoria);
+containerAllFilters.appendChild(labelCategoria);
 
 //select CATEGORIA
 const selectCategoria = document.createElement("select");
@@ -85,7 +132,7 @@ selectCategoria.id = "select-categoria";
 
 selectCategoria.classList.add("select");
 
-cardFilterContainer.appendChild(selectCategoria);
+containerAllFilters.appendChild(selectCategoria);
 
 const opcionesCategoria = [
     {
@@ -139,14 +186,14 @@ labelDesde.appendChild(document.createTextNode("Desde"));
 
 labelDesde.classList.add("label");
 
-cardFilterContainer.appendChild(labelDesde);
+containerAllFilters.appendChild(labelDesde);
 //input DESDE
 const inputDesde = document.createElement("input");
 inputDesde.type = "date";
 
 inputDesde.classList.add("input");
 
-cardFilterContainer.appendChild(inputDesde);
+containerAllFilters.appendChild(inputDesde);
 
 
 //-----------------------------------------
@@ -158,7 +205,7 @@ labelOrdenar.appendChild(document.createTextNode("Ordenar por"));
 
 labelOrdenar.classList.add("label");
 
-cardFilterContainer.appendChild(labelOrdenar);
+containerAllFilters.appendChild(labelOrdenar);
 
 //select ORDENAR
 
@@ -167,7 +214,7 @@ selectOrdenar.id = "select-ordenar";
 
 selectOrdenar.classList.add("select");
 
-cardFilterContainer.appendChild(selectOrdenar);
+containerAllFilters.appendChild(selectOrdenar);
 
 const opcionesOrdenar = [
     {
@@ -210,3 +257,4 @@ selectOrdenar.addEventListener("change", (e) =>{
 //-----------------------------------------
 
 //***************************************************************** */
+
