@@ -23,22 +23,12 @@ cardFilterContainer.appendChild(containerAllFilters);
 
 
 //MOSTRAR / OCULTAR FILTROS
-//VINCULOS DE MOSTRAR / OCULTAR FILTROS
-// const textoMostrarFiltros = document.createElement("a");
-// textoMostrarFiltros.appendChild(document.createTextNode("Mostrar filtros"));
-// cardFilterContainer.appendChild(textoMostrarFiltros);
-
-// const textoOcultarFiltros = document.createElement("a");
-// textoOcultarFiltros.appendChild(document.createTextNode("Ocultar filtros"));
-// cardFilterContainer.appendChild(textoOcultarFiltros);
 
 const toggleMostrarOcultarFiltros = document.createElement("a");
 toggleMostrarOcultarFiltros.id = "filters-toggle";
 toggleMostrarOcultarFiltros.appendChild(document.createTextNode("Ocultar filtros"));
 
 cardFilterContainer.appendChild(toggleMostrarOcultarFiltros);
-
-
 
 
 toggleMostrarOcultarFiltros.addEventListener("click", (e) =>{
@@ -53,8 +43,7 @@ toggleMostrarOcultarFiltros.addEventListener("click", (e) =>{
             toggle.innerText = "Ocultar Filtros"
             filters.classList.remove("is-hidden")
         }
-    }
- 
+    } 
 });
 
 
@@ -253,6 +242,33 @@ selectOrdenar.addEventListener("change", (e) =>{
 
 });
 
+//ORDENAR DE A/Z Y DE Z/A*************************************/
+const operacionesAzZa = operaciones.value;
+
+        if(sortBy.value==='az'){
+            operacionesAzZa.sort(function (a, b) {
+                if (a.label > b.label) {
+                  return 1;
+                }
+                if (a.label < b.label) {
+                  return -1;
+                }
+                // a tiene que ser igual a b
+                return 0;
+              });
+        }
+        if(sortBy.value==='za'){
+            operacionesAzZa.sort(function (a, b) {
+                if (a.label < b.label) {
+                  return 1;
+                }
+                if (a.label > b.label) {
+                  return -1;
+                }
+                // a tiene que ser igual a b
+                return 0;
+              });
+        }
 
 //-----------------------------------------
 
