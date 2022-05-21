@@ -269,7 +269,7 @@ document.body.appendChild(cardNewOperationContainer);
 //FORMULARIO NUEVAS OPERACION**********//
 const formNewOperation = document.createElement("form");
 
-formNewOperation.classList.add("form");
+formNewOperation.className = "form is-three-quarters";
 
 cardNewOperationContainer.appendChild(formNewOperation);
 
@@ -295,11 +295,11 @@ const operaciones = [
     },
     {
         label: 'Tipo',
-        select: ['gasto', 'ganancia'],
+        select: ['Ganancia', 'Gasto'],
     },
     {
         label: 'Categoría',
-        select: ['gasto', 'ganancia'],
+        select: ['Todas', 'Comida', 'Servicios', 'Salidas', 'Educación', 'Transporte', 'Trabajo'],
         //opcionesCategoria(),
     },
     {
@@ -314,25 +314,11 @@ const operaciones = [
 //formNewOperation.appendChild(operaciones);
 //---------------------------------//
 
-//BOTONES FORMULARIO NUEVA OPERACION
-//CANCELAR
-const buttonCancelar = document.createElement("button");
-buttonCancelar.appendChild(document.createTextNode("Cancelar"));
-buttonCancelar.className = "button is-light";
-formNewOperation.appendChild(buttonCancelar);
-//-----------
 
-//AGREGAR
-const buttonAgregar = document.createElement("button");
-buttonAgregar.appendChild(document.createTextNode("Agregar"));
-buttonAgregar.className = "button is-success";
-formNewOperation.appendChild(buttonAgregar);
-//---------------------------------//
 
 
 /******************************************************** */
-//ORDENAR DE A/Z Y DE Z/A*************************************/
-
+//ARRAY Y FORMULARIO DE NUEVAS OPERACIONES/
 
 const recorrerOperaciones = () =>{
 
@@ -365,7 +351,20 @@ const recorrerOperaciones = () =>{
 }
 
 
+//BOTONES FORMULARIO NUEVA OPERACION
+//CANCELAR
+const buttonCancelar = document.createElement("button");
+buttonCancelar.appendChild(document.createTextNode("Cancelar"));
+buttonCancelar.className = "button is-light";
+formNewOperation.appendChild(buttonCancelar);
+//-----------
 
+//AGREGAR
+const buttonAgregar = document.createElement("button");
+buttonAgregar.appendChild(document.createTextNode("Agregar"));
+buttonAgregar.className = "button is-success";
+formNewOperation.appendChild(buttonAgregar);
+//---------------------------------//
 
 
 
