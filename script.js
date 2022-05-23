@@ -1,3 +1,117 @@
+///**header */
+const header = document.createElement ("header");
+header.id = "header";
+document.body.appendChild(header);
+
+// /**
+//  * container
+//  */
+const divContainer = document.createElement("div");
+document.body.appendChild(divContainer);
+
+/**
+ * menú principal
+ */
+const navRow = document.createElement("nav");
+navRow.classList.add("navbar");
+navRow.classList.add("has-background-success");
+navRow.classList.add("is-primary");
+navRow.classList.add("is-spaced");
+navRow.classList.add("has-shadow");
+header.appendChild(navRow);
+
+/**
+ * div logo
+ */
+const divLogo = document.createElement("div");
+divLogo.classList.add("navbar-brand");
+const linkLogo = document.createElement("a");
+linkLogo.setAttribute ("href", "#");
+linkLogo.classList.add("has-text-white");
+linkLogo.classList.add("navbar-item");
+const iconLogo = document.createElement("i");
+iconLogo.setAttribute("class","fa-solid fa-wallet","mr-2");
+const titleLogo = document.createElement ("h1");
+titleLogo.classList.add("title");
+titleLogo.classList.add("is-size-2-desktop");
+titleLogo.classList.add("has-text-white");
+titleLogo.textContent = "AhorrADAs";
+linkLogo.appendChild(iconLogo);
+linkLogo.appendChild(titleLogo);
+divLogo.appendChild(linkLogo);
+navRow.appendChild(divLogo);
+
+
+/**
+ * navbar
+ */
+const navBar = document.createElement("nav");
+navBar.id = "nav-bar";
+navBar.classList.add("navbar-menu");
+navBar.classList.add("is-active");
+navRow.appendChild(navBar);
+
+// /**
+//  * Lista
+//  */
+const ulMenu = document.createElement ("ul");
+ulMenu.classList.add("navbar-end");
+navBar.appendChild(ulMenu);
+
+/**
+ * items
+ */
+const itemBalance = document.createElement("li");
+itemBalance.classList.add("navbar-item");
+const linkBalance = document.createElement("a");
+linkBalance.setAttribute ("href", "#");
+linkBalance.classList.add("has-text-white");
+const iconBalance = document.createElement("i");
+iconBalance.setAttribute("class", "fa-solid fa-chart-line","mr-2");
+const spanBalance = document.createElement("span");
+spanBalance.textContent = "Balance";
+linkBalance.appendChild(iconBalance);
+linkBalance.appendChild(spanBalance);
+itemBalance.appendChild(linkBalance);
+ulMenu.appendChild(itemBalance);
+ 
+
+
+const itemCategorias = document.createElement("li");
+itemCategorias.classList.add("navbar-item");
+itemCategorias.classList.add("has-text-white");
+const linkCategorias = document.createElement("a");
+linkCategorias.setAttribute ("href", "#");
+linkCategorias.classList.add("has-text-white");
+const iconCategorias = document.createElement("i");
+iconCategorias.setAttribute("class", "fa-solid fa-tag","mr-2");
+const spanCategorias = document.createElement("span");
+spanCategorias.textContent = "Categorías";
+linkCategorias.appendChild(iconCategorias);
+linkCategorias.appendChild(spanCategorias);
+itemCategorias.appendChild(linkCategorias);
+ulMenu.appendChild(itemCategorias);
+
+
+const itemReportes = document.createElement("li");
+itemReportes.classList.add("navbar-item");
+itemReportes.classList.add("has-text-white");
+const linkReportes = document.createElement("a");
+linkReportes.setAttribute ("href", "#");
+linkReportes.classList.add("has-text-white");
+const iconReportes = document.createElement("i");
+iconReportes.setAttribute("class","fa-solid fa-chart-pie","mr-2");
+const spanReportes = document.createElement("span");
+spanReportes.textContent = "Reportes";
+linkReportes.appendChild(iconReportes);
+linkReportes.appendChild(spanReportes);
+itemReportes.appendChild(linkReportes);
+ulMenu.appendChild(itemReportes);
+
+//--------------------------------------------------------------//
+
+
+
 //CARD FILTROS************************************************/
 //creacion CONTAINER FILTROS
 const cardFilterContainer = document.createElement("div");
