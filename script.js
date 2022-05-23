@@ -253,10 +253,29 @@ selectOrdenar.addEventListener("change", (e) =>{
 
 });
 
+/******************************************* */
+//CONTAINER OPERACIONES----------------------//
+const operationContainer = document.createElement("div");
+operationContainer.className = "card is-medium";
+document.body.appendChild(operationContainer);
+//-------------------------------------------
 
-
-
+//OPERACIONES BOTON-----------------//
+const botonOperaciones = document.createElement("button");
+botonOperaciones.className = "button is-success is-right";
+botonOperaciones.appendChild(document.createTextNode("+ Nueva operación"));
+operationContainer.appendChild(botonOperaciones);
 /****************************************************** */
+
+//OPERACIONES IMAGENES-----------------------//
+const operationImage = document.createElement("img");
+operationImage.className = "card-image";
+operationImage.setAttribute("src", "https://frontend-proyecto-ahorradas.adaitw.org/imgs/wallet.svg");
+operationImage.setAttribute("width", "30%");
+
+operationContainer.appendChild(operationImage);
+//-------------------------------------------
+
 //***************************************************************** */
 
 //CONTAINER NUEVAS OPERACIONES*********//
