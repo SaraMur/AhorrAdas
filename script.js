@@ -111,13 +111,11 @@ ulMenu.appendChild(itemReportes);
 
 //--------------------------------------------------------------//
 
-
-
 const containerGeneral = document.getElementById("container-general");
 const containerNuevasOperaciones = document.getElementById("container-nuevas-operaciones");
 // main
 
-//CARD FILTROS************************************************/
+//CARD FILTROS by SARA************************************************/
 //creacion CONTAINER FILTROS
 const cardFilterContainer = document.createElement("div");
 cardFilterContainer.id = "card-filter-container";
@@ -582,5 +580,5 @@ formNewOperation.appendChild(buttonAgregar);
               });
         }
 */
-//-----------------------------------------
+//----END SARA CODE-------------------------------------
 
