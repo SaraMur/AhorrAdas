@@ -1,5 +1,5 @@
 * {
-  margin: 0;
+  margin: 2%;
   box-sizing: border-box;
 }
 
@@ -19,4 +19,49 @@
 
 .padding-b{
     padding-bottom: 20px;
+}
+
+#container-general{
+  padding: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  align-content: space-between;
+  margin: 2%;
+}
+
+#container-nuevas-operaciones{
+  display: none;
+}
+
+#footer-names{
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+#operation-container{
+  display: flex;
+  align-content: space-between;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#container-btn-tit-operaciones{
+  display: flex;
+  align-content: space-between;
+  flex-direction: row;
+}
+
+#operation-image{
+  width: 50%;
+
+}
+
+#containerTitOper{
+
+}
+
+#container-btn-oper{
+
 }
