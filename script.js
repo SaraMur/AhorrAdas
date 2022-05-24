@@ -112,7 +112,6 @@ ulMenu.appendChild(itemReportes);
 //--------------------------------------------------------------//
 
 
-=======
 
 const containerGeneral = document.getElementById("container-general");
 const containerNuevasOperaciones = document.getElementById("container-nuevas-operaciones");
