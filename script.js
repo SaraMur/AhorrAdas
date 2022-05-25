@@ -287,7 +287,12 @@ tituloOperaciones.className = "title is-3";
 containerTitOper.appendChild(tituloOperaciones);
 
 //---------------------------------------------
+//CONTAINER NUEVAS OPERACIONES*********//
+const cardNewOperationContainer = document.createElement("div");
+cardNewOperationContainer.classList.add("box");
 
+containerNuevasOperaciones.appendChild(cardNewOperationContainer);
+//--------------------------------------//
 //CONTAINER BOTON OPERACIONES
 const containerBtnOper = document.createElement("div");
 containerBtnOper.id = "container-btn-oper";
@@ -299,6 +304,15 @@ botonOperaciones.className = "button is-success is-right";
 
 botonOperaciones.appendChild(document.createTextNode("+ Nueva operación"));
 containerBtnOper.appendChild(botonOperaciones);
+
+botonOperaciones.addEventListener("click", function(){
+    let formularioNuevaOperacion = document.getElementById('container-nuevas-operaciones');
+    for (let i = 0; i < formularioNuevaOperacion.length; i++) {
+        formularioNuevaOperacion[i].style.display = "block";
+        containerGeneral.style.width = "100%";
+    }
+   
+});
 
 /*******************************************************/
 
@@ -329,12 +343,7 @@ operationContainer.appendChild(parrCardOperaciones);
 
 //***************************************************************** */
 
-//CONTAINER NUEVAS OPERACIONES*********//
-const cardNewOperationContainer = document.createElement("div");
-cardNewOperationContainer.classList.add("box");
 
-containerNuevasOperaciones.appendChild(cardNewOperationContainer);
-//--------------------------------------//
 
 //FORMULARIO NUEVAS OPERACION**********//
 const formNewOperation = document.createElement("form");
@@ -427,6 +436,15 @@ const buttonCancelar = document.createElement("button");
 buttonCancelar.appendChild(document.createTextNode("Cancelar"));
 buttonCancelar.className = "button is-light";
 formNewOperation.appendChild(buttonCancelar);
+
+buttonCancelar.addEventListener("click", function(){
+    let formularioNuevaOperacion = document.getElementById('container-nuevas-operaciones');
+    for (let i = 0; i < formularioNuevaOperacion.length; i++) {
+        formNewOperation[i].style.display = "none";
+        contenedorPrincipal.style.width = "100%";
+    }
+   
+});
 //-----------
 
 //AGREGAR
