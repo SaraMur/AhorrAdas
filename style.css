@@ -30,9 +30,9 @@
   margin: 2%;
 }
 
-#container-nuevas-operaciones{
-  display: none;
-}
+/*#container-nueva-operacion{
+ display: none;
+}*/
 
 #footer-names{
   display: flex;

@@ -11,38 +11,39 @@
 <body>
     <div id="container-general">
 
-    </div>
-
-    <div id="container-nuevas-operaciones">
-        <div id="nueva-operacion">
-            <label for="descripcion">Descripción</label>
-            <input type="text">
-            <label for="monto">Monto</label>
-            <input type="number">
-            <label for="tipo">Tipo</label>
-            <select name="tipo" id="select-tipo">
-                <option value="gasto">Gasto</option>
-                <option value="ganancia">Ganancia</option>
-            </select>
-            <label for="categoria">Categoría</label>
-            <select name="categoria" id="select-categoria">
-                <option value="comida">Comida</option>
-                <option value="sevicios">Servicios</option>
-                <option value="salidas">Salidas</option>
-                <option value="educacion">Educación</option>
-                <option value="transporte">Transporte</option>
-                <option value="trabajo">Trabajo</option>
-            </select>
-            <label for="fecha">Fecha</label>
-            <input type="date">
+        <!--NUEVA OPERACION-->
+        <div id="container-nueva-operacion">
+            <div id="nueva-operacion">
+                <label for="descripcion">Descripción</label>
+                <input type="text">
+                <label for="monto">Monto</label>
+                <input type="number">
+                <label for="tipo">Tipo</label>
+                <select name="tipo" id="select-tipo">
+                    <option value="gasto">Gasto</option>
+                    <option value="ganancia">Ganancia</option>
+                </select>
+                <label for="categoria">Categoría</label>
+                <select name="categoria" id="select-categoria">
+                    <option value="comida">Comida</option>
+                    <option value="sevicios">Servicios</option>
+                    <option value="salidas">Salidas</option>
+                    <option value="educacion">Educación</option>
+                    <option value="transporte">Transporte</option>
+                    <option value="trabajo">Trabajo</option>
+                </select>
+                <label for="fecha">Fecha</label>
+                <input type="date">
+            </div>
+            <div id="botones-nueva-op">
+                <button id="cancelar">Cancelar</button>
+                <button id="agregar">Agregar</button>
+            </div>        
         </div>
-        <div id="botones-nueva-op">
-            <button id="cancelar">Cancelar</button>
-            <button id="agregar">Agregar</button>
-        </div>        
     </div>
 
-    <script src="operaciones.js"></script>
+
+
     <script src="script.js"></script>
 
    <footer class="container" id="footer-names">Hecho con ❤ por Sara, Fiamma y Danila</footer> 
